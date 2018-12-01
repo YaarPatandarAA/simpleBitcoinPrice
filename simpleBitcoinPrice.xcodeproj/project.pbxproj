@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80DCE357009C3E95119E0326 /* Pods_simpleBitcoinPrice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1D6A2121BD9A88688BEB43 /* Pods_simpleBitcoinPrice.framework */; };
 		EF4F313721B227500085FAEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F313621B227500085FAEF /* AppDelegate.swift */; };
 		EF4F313921B227500085FAEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4F313821B227500085FAEF /* ViewController.swift */; };
 		EF4F313C21B227500085FAEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF4F313A21B227500085FAEF /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1D6A2121BD9A88688BEB43 /* Pods_simpleBitcoinPrice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simpleBitcoinPrice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EE55C870C303710FC57F82F /* Pods-simpleBitcoinPrice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleBitcoinPrice.release.xcconfig"; path = "Pods/Target Support Files/Pods-simpleBitcoinPrice/Pods-simpleBitcoinPrice.release.xcconfig"; sourceTree = "<group>"; };
+		E3F2D95368D851E4F9445B2F /* Pods-simpleBitcoinPrice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simpleBitcoinPrice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-simpleBitcoinPrice/Pods-simpleBitcoinPrice.debug.xcconfig"; sourceTree = "<group>"; };
 		EF4F313321B227500085FAEF /* simpleBitcoinPrice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simpleBitcoinPrice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF4F313621B227500085FAEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF4F313821B227500085FAEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DCE357009C3E95119E0326 /* Pods_simpleBitcoinPrice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13AFBCE9708382700CAAEE6C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3F2D95368D851E4F9445B2F /* Pods-simpleBitcoinPrice.debug.xcconfig */,
+				6EE55C870C303710FC57F82F /* Pods-simpleBitcoinPrice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EF4F312A21B227500085FAEF = {
 			isa = PBXGroup;
 			children = (
 				EF4F313521B227500085FAEF /* simpleBitcoinPrice */,
 				EF4F313421B227500085FAEF /* Products */,
+				13AFBCE9708382700CAAEE6C /* Pods */,
+				F4A1BC827BA902A53195E075 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = simpleBitcoinPrice;
 			sourceTree = "<group>";
 		};
+		F4A1BC827BA902A53195E075 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E1D6A2121BD9A88688BEB43 /* Pods_simpleBitcoinPrice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF4F314521B227510085FAEF /* Build configuration list for PBXNativeTarget "simpleBitcoinPrice" */;
 			buildPhases = (
+				11B73FE80CEEB3E886482748 /* [CP] Check Pods Manifest.lock */,
 				EF4F312F21B227500085FAEF /* Sources */,
 				EF4F313021B227500085FAEF /* Frameworks */,
 				EF4F313121B227500085FAEF /* Resources */,
+				91C426F9725EDC113A814DE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11B73FE80CEEB3E886482748 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-simpleBitcoinPrice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91C426F9725EDC113A814DE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-simpleBitcoinPrice/Pods-simpleBitcoinPrice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-simpleBitcoinPrice/Pods-simpleBitcoinPrice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF4F312F21B227500085FAEF /* Sources */ = {
@@ -280,6 +355,7 @@
 		};
 		EF4F314621B227510085FAEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F2D95368D851E4F9445B2F /* Pods-simpleBitcoinPrice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +374,7 @@
 		};
 		EF4F314721B227510085FAEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE55C870C303710FC57F82F /* Pods-simpleBitcoinPrice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
